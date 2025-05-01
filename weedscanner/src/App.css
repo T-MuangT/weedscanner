@@ -1,0 +1,116 @@
+/* General Styles */
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: #e8f5e9; /* Light green background */
+  color: #2e7d32; /* Dark green text */
+}
+
+button {
+  border: none;
+  border-radius: 20px;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  background-color: #66bb6a; /* Green button */
+  color: white;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #43a047; /* Darker green on hover */
+}
+
+/* Desktop - 1: Main Page */
+.main-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  text-align: center;
+}
+
+.main-page .icon {
+  font-size: 100px;
+  margin-bottom: 20px;
+}
+
+.main-page h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.main-page button {
+  font-size: 18px;
+  padding: 15px 30px;
+}
+
+/* Desktop - 2: Upload Page */
+.upload-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  text-align: center;
+}
+
+.upload-page h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+.upload-page .upload-box {
+  width: 300px;
+  height: 200px;
+  background-color: #c8e6c9; /* Light green box */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px dashed #2e7d32; /* Dashed border */
+  margin-bottom: 20px;
+}
+
+.upload-page .upload-box p {
+  font-size: 18px;
+  color: #2e7d32;
+}
+
+/* Desktop - 3: Result Page */
+.result-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  text-align: center;
+}
+
+.result-page h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.result-page .result-box {
+  width: 200px;
+  height: 200px;
+  background-color: #f5f5f5; /* Light gray box */
+  border-radius: 10px;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.result-page .result-text {
+  font-size: 18px;
+  color: #2e7d32;
+  margin-bottom: 20px;
+}
+
+.result-page button {
+  font-size: 18px;
+  padding: 15px 30px;
+}
