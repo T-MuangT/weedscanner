@@ -1,6 +1,6 @@
 import tensorflow as tf
 from tensorflow.keras.models import Sequential
-from tensorflow.keras.layers import Dense, Conv2D, MaxPooling2D, Flatten
+from tensorflow.keras.layers import InputLayer, Dense, Conv2D, MaxPooling2D, Flatten
 from tensorflow.keras.preprocessing.image import ImageDataGenerator
 import os
 
@@ -29,7 +29,8 @@ train_generator = train_datagen.flow_from_directory(
 
 # Build the model
 model = Sequential([
-    Conv2D(32, (3, 3), activation='relu', input_shape=(640, 640, 3)),
+    InputLayer(input_shape=(640, 640, 3)),
+    Conv2D(32, (3, 3), activation='relu'),
     MaxPooling2D((2, 2)),
     Conv2D(64, (3, 3), activation='relu'),
     MaxPooling2D((2, 2)),
@@ -46,6 +47,5 @@ model.fit(train_generator, epochs=10)
 
 # Save the model in TensorFlow.js format
 model.save('plant-model.h5')
-tf.keras.models.save_model(model, 'plant-model-tfjs', save_format='tfjs')
 
 print("Model training complete and saved in TensorFlow.js format.")
